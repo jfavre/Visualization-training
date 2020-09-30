@@ -10,12 +10,12 @@
 
 install_dir = "/apps/daint/UES/jenkins/7.0.UP02/mc/easybuild/software/Visit/3.1.2-CrayGNU-20.08"
 
-args = ("-sshtunneling", "-np", "8", "-nn", "1", # 1 node and 8 taks per node
+args = ("-sshtunneling", "-np", "8", "-nn", "1", # 1 node and 8 tasks per node
         "-l", "srun",
         "-dir", install_dir,
         "-t", "00:05:00", # allocate for 5 minutes
         "-la", # launcher option follow
-        "--cpu_bind=sockets -C mc -p debug -A usup")
+        "--cpu_bind=sockets -C mc -p debug")
 
 # copy /apps/daint/UES/6.0.UP02/VisIt/host_daint.xml  $HOME/.visit/hosts/host_daint.xml on your desktop
 # host name must match the one in $HOME/.visit/hosts/host_daint.xml
