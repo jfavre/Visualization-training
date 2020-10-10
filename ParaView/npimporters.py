@@ -55,7 +55,7 @@ class vtkRectGridFromArrays:
     def __init__(self):
         self.__mesh = vtk.vtkRectilinearGrid()
         self.__dims = [-1,-1,-1]
-    
+
     def SetCoordinates(self, cArray0, cArray1, cArray2):
         assert len(cArray0.shape) == 1
         self.__mesh.SetXCoordinates(vtknp.numpy_to_vtk(cArray0))
@@ -70,17 +70,17 @@ class vtkRectGridFromArrays:
         self.__dims[2] = cArray2.shape[0]
         
         self.__mesh.SetDimensions(self.__dims)
-        
+
     def GetDimensions(self):
         return self.__mesh.GetDimensions()
-        
+
     def AddArray(self, dArray, name):
         assert np.prod(dArray.shape) == np.prod(self.__dims)
         vtkarr = vtknp.numpy_to_vtk(dArray.ravel())
         vtkarr.SetName(name)
         self.__mesh.GetPointData().AddArray(vtkarr)
-        if len(dArray.shape) == 1:
-          self.__mesh.GetPointData().SetActiveScalars(name)
+        self.__mesh.GetPointData().SetActiveScalars(name)
+
     def GetOutput(self):
         return self.__mesh
 
