@@ -74,7 +74,7 @@ Render()
 
 #####################################################
 # create a new 'PLY Reader'
-reader = PLYReader(FileNames=['sponge.ply'])
+reader = PLYReader(FileNames=['../Data/sponge.ply'])
 
 # show data from reader
 readerDisplay = Show(reader, renderView1)
