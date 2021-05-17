@@ -20,7 +20,7 @@ echo "VNC Server accepting connections on $PORT"
 echo "On client machine:"
 # when outside CSCS, must go through ela
 echo "Linux client:   ssh -f -L $PORT:${i}.${XTHOST}:5901 $USER@ela.cscs.ch sleep 3600"
-echo "Windows client: plink -l $USER -L $PORT:${i}.${XTHOST}:5901 ela.cscs.ch sleep 3600"
+echo "Windows client: \"C:\Program Files\PuTTY\plink.exe\" -l $USER -L $PORT:${i}.${XTHOST}:5901 ela.cscs.ch sleep 3600"
 #otherwise go straight to nid
 #echo "ssh -f -L $PORT:localhost:5901 $USER@${i}.${XTHOST} sleep 3600"
 echo "vncviewer localhost:$PORT"

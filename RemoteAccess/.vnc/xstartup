@@ -1,0 +1,29 @@
+#!/bin/sh
+
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+
+userclientrc=$HOME/.xinitrc
+sysclientrc=/etc/X11/xinit/xinitrc
+
+if [ -f "$userclientrc" ]; then
+  client="$userclientrc"
+elif [ -f "$sysclientrc" ]; then
+  client="$sysclientrc"
+fi
+
+if [ -x "$client" ]; then
+  exec "$client"
+fi
+if [ -f "$client" ]; then
+  exec sh "$client"
+fi
+
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+xsetroot -solid grey
+xterm -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &
+if [ -x /usr/bin/twm ]; then
+  /usr/bin/twm &
+else
+  echo "No window manager found. You should install a window manager to get properly working VNC session."
+fi
