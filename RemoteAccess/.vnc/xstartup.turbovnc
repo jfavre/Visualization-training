@@ -1,0 +1,68 @@
+#!/bin/sh
+
+unset SESSION_MANAGER
+OS=`uname -s`
+if [ $OS = 'Linux' ]; then
+  case "$WINDOWMANAGER" in
+    *gnome*)
+# Uncomment the following line if you experience keyboard mapping problems
+# with Gnome.
+#     export XKL_XMODMAP_DISABLE=1
+      if [ -e /etc/SuSE-release ]; then
+        PATH=$PATH:/opt/gnome/bin
+        export PATH
+      fi
+      ;;
+  esac
+fi
+if [ -x /etc/X11/xinit/xinitrc ]; then
+  exec /etc/X11/xinit/xinitrc
+fi
+if [ -f /etc/X11/xinit/xinitrc ]; then
+  exec sh /etc/X11/xinit/xinitrc
+fi
+if [ -x $HOME/.xinitrc ]; then
+  exec $HOME/.xinitrc
+fi
+if [ -f $HOME/.xinitrc ]; then
+  exec sh $HOME/.xinitrc
+fi
+if [ -x /usr/local/lib/X11/xinit/xinitrc ]; then
+  exec /usr/local/lib/X11/xinit/xinitrc
+fi
+if [ -f /usr/local/lib/X11/xinit/xinitrc ]; then
+  exec sh /usr/local/lib/X11/xinit/xinitrc
+fi
+if [ $OS = 'SunOS' -a -f $HOME/.dt/sessions/lastsession ]; then
+  if [ -x `cat $HOME/.dt/sessions/lastsession` ]; then
+    exec `cat $HOME/.dt/sessions/lastsession`
+  fi
+fi
+if [ -f /usr/dt/config/Xsession.jds ]; then
+  exec /usr/dt/config/Xsession.jds
+else
+  if [ -f /usr/dt/config/Xinitrc.jds ]; then
+    exec /usr/dt/config/Xinitrc.jds
+  else
+    if [ -f /usr/dt/bin/Xsession ]; then
+      exec /usr/dt/bin/Xsession
+    else
+      if [ -x /opt/sfw/bin/fvwm2 ]; then
+        /opt/sfw/bin/fvwm2
+      else
+        which fvwm2 && {
+          fvwm2
+        } || {
+          which twm && {
+            xrdb $HOME/.Xresources
+            xsetroot -solid grey
+            xterm -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &
+            twm
+          } || {
+            echo No window manager found!
+          }
+        }
+      fi
+    fi
+  fi
+fi
