@@ -3,9 +3,8 @@
 # Dr. Jean M. Favre, Swiss National Supercomputing Centre
 # Senior Visualization Software Engineer
 #
-# Tested with ParaView 5.8.1 and ospray 1.8.5
-#
-
+# Tested with ParaView 5.10.1 and ospray 2.8.0
+# Wed Mar 23 01:08:21 PM CET 2022
 
 #### import the simple module from the paraview
 from paraview.simple import *
@@ -17,11 +16,11 @@ materialLibrary1 = GetMaterialLibrary()
 print("using materials: {:}".format(mf1))
 materialLibrary1.LoadMaterials = mf1
 
-Batch = False
+Batch = True
 OptiXEnabled = False
 ImageCount = 0
 
-OSPRay_Version = "OSPRay1.8.5"
+OSPRay_Version = "OSPRay2.8.0"
 OptiX_Version  = "Optix6.5"
 
 if Batch:
