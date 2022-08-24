@@ -3,7 +3,7 @@
 #
 # For Linux users only.
 # syntax:
-# paraview --script=pvParaView-v5.10ConnectToCrays.py
+# paraview --script pvParaView-v5.10ConnectToCrays.py
 #
 # You must edit the username, userid, and account
 ##############################################################################
@@ -11,7 +11,7 @@ from paraview.simple import *
 import subprocess
 
 username      = "jfavre"            # your username at CSCS
-hosts         = ["daint104.cscs.ch", "dom.cscs.ch", "alps03.cscs.ch"]  # the login node
+hosts         = ["daint.cscs.ch", "dom.cscs.ch", "eiger.cscs.ch"]  # the login node
 userid        = 1100               # your Linux userid on Piz Daint
 remoteScript  = "/apps/daint/UES/ParaView/rc-submit-pvserver.sh"
 atime         = "00:09:59"          # allocation time
