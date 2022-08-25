@@ -48,19 +48,15 @@ source /users/jfavre/myvenv/bin/activate
 ```
 Demonstrators:
 
-    Hello_Sphere-ParaView.0.ipynb
-
-    Hello_Sphere-ParaView.1.ipynb
-
-    Hello_Sphere-ParaView.2.ipynb
-
-    Hello_Molecule.ipynb
-
-    XArrays-ParaView-Import.ipynb
-
-    pvNVIDIA-IndeX.ipynb
-
-    ParaView-SMP-Contours.ipynb
+| Notebook file | Description |
+| --- | --- |
+| Hello_Sphere-ParaView.0.ipynb | Import ParaView, display a sphere, 3D interactive rendering |
+| Hello_Sphere-ParaView.1.ipynb | Link ParaView object's parameters to ipywidgets; make and view the video |
+| Hello_Sphere-ParaView.2.ipynb | Do the same, but with MPI on-the-node |
+| Hello_Molecule.ipynb | Animate a time-series of molecular trajectories |
+| XArrays-ParaView-Import.ipynb | Import Xarray into curvilinear (spherical) grid object |
+| pvNVIDIA-IndeX.ipynb | Load the NVIDIA IndeX plugin for advanced volumetric rendering
+| ParaView-SMP-Contours.ipynb | Use all CPU threads to apply accelerated algorithms |
 
 Questions? Visit https://support.cscs.ch/
 
