@@ -62,5 +62,5 @@ Demonstrators:
 
     ParaView-SMP-Contours.ipynb
 
-Questions? visit support.cscs.ch
+Questions? Visit https://support.cscs.ch/
 
