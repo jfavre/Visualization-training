@@ -19,7 +19,7 @@ Motivations:
 
 How to:
 
-    Install [ipyparaview]([url](https://github.com/NVIDIA/ipyparaview)) 
+    Install https://github.com/NVIDIA/ipyparaview 
     Create a Python virtual env as per our [documentation]([url](https://user.cscs.ch/tools/interactive/python/#python-virtual-environments))
     Use a [classic notebook]([url](https://user.cscs.ch/tools/interactive/jupyterlab/#introduction))
 
