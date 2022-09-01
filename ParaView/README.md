@@ -62,6 +62,8 @@ Questions? Visit https://support.cscs.ch/
 
 What is new with ParaView?
 
-    Release v5.11 is being actively tested. [Release notes](https://gitlab.kitware.com/paraview/paraview/-/blob/master/Documentation/release/ParaView-5.11.0.md/) highlight lots of improvements.
-    Connection setup files have been updated Details are [here](https://user.cscs.ch/computing/visualisation/paraview/)
-    More compile options (VisIt Bridge **enabled**, VTK-m **enabled**, Catalyst in-situ **enabled**, CDI Reader (ICON Data) **enabled**) 
+- Release v5.11 is being actively tested. [Release notes](https://gitlab.kitware.com/paraview/paraview/-/blob/master/Documentation/release/ParaView-5.11.0.md/) highlight lots of improvements.
+
+- Connection setup files for CSCS have been updated. Details are [here](https://user.cscs.ch/computing/visualisation/paraview/)
+
+- More compile options (VisIt Bridge **enabled**, VTK-m **enabled**, Catalyst in-situ **enabled**, CDI Reader (ICON Data) **enabled**) 
