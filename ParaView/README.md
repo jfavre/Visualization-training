@@ -4,7 +4,7 @@ Where do I find these notes and the examples?
 
     git clone https://github.com/jfavre/Visualization-training
 
-    goto directory [ParaView]([url](https://github.com/jfavre/Visualization-training/ParaView))
+    goto directory [ParaView](https://github.com/jfavre/Visualization-training/ParaView)
     
 Motivations:
 
