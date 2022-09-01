@@ -66,4 +66,4 @@ What is new with ParaView?
 
 - Connection setup files for CSCS have been updated. Details are [here](https://user.cscs.ch/computing/visualisation/paraview/)
 
-- More compile options (VisIt Bridge **enabled**, VTK-m **enabled**, Catalyst in-situ **enabled**, CDI Reader (ICON Data) **enabled**) 
+- More compile options (VisIt Bridge **enabled**, VTK-m **enabled**, Catalyst in-situ **enabled**, GeovisCore **eanbled**, CDI Reader (ICON Data) **enabled**) 
