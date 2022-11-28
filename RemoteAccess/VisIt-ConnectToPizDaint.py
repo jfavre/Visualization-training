@@ -1,16 +1,18 @@
 # Passed with v3.2.2 Wed Mar 23 11:04:13 AM CET 2022
-# Run from your local desktop with version 3.2.*
+# Run from your local desktop with version 3.*
 # syntax:
-#         visit -small -cli -ni -s VisIt-v3.2.0ConnectToPizDaint.py
+#         visit -small -cli -ni -s VisIt-ConnectToPizDaint.py
 # N.B. your *must* substitute the string "usup" by the id of your *own* project
+# You can log in to Piz daint, and use the command "module show Visit" (with the appropriate version)
+# the variable $EBROOTVISIT is the install_dir below:
 
-install_dir = "/apps/daint/UES/jenkins/7.0.UP03/21.09/daint-mc/software/Visit/3.2.2-CrayGNU-21.09"
+install_dir = "/apps/daint/UES/jenkins/7.0.UP03/21.09/daint-mc/software/Visit/3.3.0-CrayGNU-21.09"
 
 args = (
         "-sshtunneling",
         "-np", "8",
         "-nn", "1",
-        "--prolog", "module load daint-mc Visit/3.2.2-CrayGNU-21.09",
+        "--prolog", "module load daint-mc Visit/3.3.0-CrayGNU-21.09",
         "-l", "srun",
         "-dir", install_dir,
         "-t", "00:05:00",
